@@ -1,0 +1,49 @@
+# theme = "catppuccin_mocha"
+theme = "onedark"
+
+[editor]
+cursorline = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "--INSERT--"
+mode.select = "--SELECT--"
+
+[keys.normal]
+"0"   = "goto_line_start"
+"$"   = "goto_line_end"
+"{"   = "goto_prev_paragraph"
+"}"   = "goto_next_paragraph"
+"G"   = "goto_last_line"
+"C-s" = ":write"
+"C-w" = ":buffer-close"
+"C-n" = ":new"
+
+#[editor.whitespace]
+#render = "all"
+# or control each character
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+tabpad = "·"
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
